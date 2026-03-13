@@ -13,6 +13,7 @@ void setup() {
 void loop() {
   // Проверяем, есть ли данные, полученные через Bluetooth
   if (SerialBT.available()) {
+    SerialBT.println("введите 1 чтоб получить сообщение");
     char incomingChar = SerialBT.read(); // Читаем полученный символ
     Serial.print("Получен символ: ");
     Serial.println(incomingChar);
@@ -28,3 +29,4 @@ void loop() {
   // но в данном примере мы просто ждем команды.
   delay(10); // Небольшая задержка, чтобы не перегружать процессор
 }
+
